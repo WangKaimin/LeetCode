@@ -1,0 +1,21 @@
+####
+## Code::Blocks
+####
+
+*.depend
+*.layout
+*.mode1v3
+*.pbxuser
+
+.svn/
+obj/
+bin/
+build/
+!data/
+Debug*/
+Release*/
+*~
+*.exe
+*.vcproj
+*.bmarks
+*/doxygen/*
