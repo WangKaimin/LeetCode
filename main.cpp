@@ -46,6 +46,5 @@ int main()
     //cin>>s;
     temp.reverseWords(s);
     cout<<s<<"#"<<endl;
-    //cout << "Hello world!" << endl;
     return 0;
 }
