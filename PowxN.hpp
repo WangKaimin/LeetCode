@@ -7,9 +7,21 @@ using namespace std;
 /**<
 x = x^(n/2) * x^(n/2) * x^(n%2)
 */
-class Solution {
+class Solution
+{
 private:
-    double mypow02(double x, unsigned int n) {
+    double mypow01(double x, unsigned n)
+    {
+        double result=1.0;
+        while(n--)
+        {
+            result *= x;
+        }
+        return result;
+    }
+private:
+    double mypow02(double x, unsigned int n)
+    {
         if(0 == x)
             return 0;
         else if(0 == n)
@@ -20,7 +32,8 @@ private:
 
     }
 private:
-    double mypow03(double x, unsigned int n) {
+    double mypow03(double x, unsigned int n)
+    {
         double t;
         if(0 == x)
             return 0;
@@ -35,7 +48,8 @@ private:
         return t;
     }
 private:
-    double mypow04(double x, unsigned int n) {
+    double mypow04(double x, unsigned int n)
+    {
         double t = x;
         unsigned int uiNum = (unsigned int)1 << (sizeof(unsigned int)*8 - 1);
         if(0 == n)
@@ -54,7 +68,8 @@ private:
         return t;
     }
 private:
-    double mypow05(double x, unsigned int n) {
+    double mypow05(double x, unsigned int n)
+    {
         double t = x;
         unsigned int uiNum = 1, uiNumN = n;
         if(0 == n)
@@ -76,8 +91,9 @@ private:
         return t;
     }
 public:
-    double pow(double x, int n) {
-        double num = mypow05(x, abs(n));
+    double pow(double x, int n)
+    {
+        double num = mypow04(x, abs(n));
         if(0 >= n)
             return 1.0/num;
         else

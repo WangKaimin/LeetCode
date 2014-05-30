@@ -9,14 +9,14 @@ using namespace std;
 
 class Solution
 {
-
+private:
 private:
     void reverseChars(string &s)
     {
 
     };
 public:
-    void reverseWords(string &s)
+    void reverseWords01(string &s)
     {
         //vector<int>::iterator it;
         string::iterator it, tit;
