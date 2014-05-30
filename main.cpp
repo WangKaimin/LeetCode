@@ -1,14 +1,13 @@
 #include <iostream>
-#include "ReverseWordsInAString.hpp"
+
+//#include "ReverseWordsInAString.hpp"
+#include "PowxN.hpp"
 
 using namespace std;
 
 int main()
 {
-    Solution temp;
-    string s("   wang  min   kai  ");
-    //cin>>s;
-    temp.reverseWords(s);
-    cout<<s<<"#"<<endl;
+    Solution sol;
+    sol.test();
     return 0;
 }

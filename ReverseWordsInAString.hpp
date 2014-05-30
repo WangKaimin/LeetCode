@@ -1,6 +1,7 @@
 #ifndef REVERSEWORDSINASTRING_HPP_INCLUDED
 #define REVERSEWORDSINASTRING_HPP_INCLUDED
 
+#include <iostream>
 #include <string>
 #include <algorithm>
 
@@ -38,6 +39,14 @@ public:
             }
         }
         reverse(tit,it);
+    }
+    void test()
+    {
+        Solution temp;
+        string s("   wang  min   kai  ");
+        //cin>>s;
+        temp.reverseWords(s);
+        cout<<s<<"#"<<endl;
     }
 };
 
