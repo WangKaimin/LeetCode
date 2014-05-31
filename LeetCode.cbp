@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="PathSum.hpp" />
+		<Unit filename="PathSumII.hpp" />
 		<Unit filename="PowxN.hpp" />
 		<Unit filename="ReverseWordsInAString.hpp" />
 		<Unit filename="main.cpp" />
