@@ -36,6 +36,9 @@
 		<Unit filename="PathSumII.hpp" />
 		<Unit filename="PowxN.hpp" />
 		<Unit filename="ReverseWordsInAString.hpp" />
+		<Unit filename="SingleNumber.hpp" />
+		<Unit filename="SingleNumberII.hpp" />
+		<Unit filename="Tree.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

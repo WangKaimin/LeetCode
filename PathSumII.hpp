@@ -106,7 +106,30 @@ public:
     void test()
     {
         Solution sol;
-        sol.pathSum(NULL, 0);
+        TreeNode *root;
+
+        int n = 15, arr[15] = {1,-2,4,-1,0,0,0,3,0,0,-3,2,0,0,0};
+
+        /*cin>>n;
+        for(int i=0;i<n;i++)
+            cin>>arr[i];*/
+        root = initTree(arr, n);
+        preOrder(root);
+        cout<<endl;
+        inOrder(root);
+        cout<<endl;
+        postOrder(root);
+        cout<<endl;
+        sol.pathSum(root, 2);
+        vector< vector<int> > arrs(sol.arrs);
+        for(vector< vector<int> >::iterator i = arrs.begin(); i!=arrs.end(); i++ )
+        {
+            for(vector<int>::iterator j = (*i).begin(); j!=(*i).end(); j++)
+            {
+                cout<<*j<<" ";
+            }
+            cout<<endl;
+        }
     }
 };
 

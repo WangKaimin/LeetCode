@@ -2,6 +2,7 @@
 #define PATHSUM_CPP_INCLUDED
 
 #include "Tree.hpp"
+
 using namespace std;
 
 class Solution
@@ -63,7 +64,23 @@ public:
     void test()
     {
         Solution sol;
-        sol.hasPathSum(NULL, 0);
+        TreeNode *root;
+        int n = 15, arr[15] = {1,-2,4,-1,0,0,0,3,0,0,-3,2,0,0,0};
+
+        /*cin>>n;
+        for(int i=0;i<n;i++)
+            cin>>arr[i];*/
+        root = initTree(arr, n);
+        preOrder(root);
+        cout<<endl;
+        inOrder(root);
+        cout<<endl;
+        postOrder(root);
+        cout<<endl;
+        if(sol.hasPathSum(root, 0))
+            cout<<"True"<<endl;
+        else
+            cout<<"False"<<endl;
     }
 };
 
