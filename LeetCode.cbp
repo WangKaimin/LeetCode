@@ -32,13 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="MedianOfTwoSortedArrays.hpp" />
 		<Unit filename="PathSum.hpp" />
 		<Unit filename="PathSumII.hpp" />
 		<Unit filename="PowxN.hpp" />
 		<Unit filename="ReverseWordsInAString.hpp" />
 		<Unit filename="SingleNumber.hpp" />
 		<Unit filename="SingleNumberII.hpp" />
+		<Unit filename="Tree.cpp" />
 		<Unit filename="Tree.hpp" />
+		<Unit filename="TwoNum.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
