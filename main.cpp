@@ -9,9 +9,10 @@
 //#include "TwoNum.hpp"
 //#include "MedianOfTwoSortedArrays.hpp"
 //#include "AddTwoNumbers.hpp"
-#include "BinaryTreeInorderTraversal.hpp"
+//#include "BinaryTreeInorderTraversal.hpp"
 //#include "BinaryTreePreorderTraversal.hpp"
 //#include "BinaryTreePostorderTraversal.hpp"
+#include "FlattenBinaryTreeToLinkedList.hpp"
 using namespace std;
 
 int main()
