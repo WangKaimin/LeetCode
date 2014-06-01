@@ -14,50 +14,48 @@ class Solution {
 public:
     ListNode *addTwoNumbers03(ListNode *l1, ListNode *l2) {
         ListNode *p1 = l1, *p2 = l2;
-        ListNode *p3 = NULL, *result = l1;
+        ListNode *p3, *dummy = new ListNode(0);
         int t = 0, sum = 0;
+        p3 = dummy;
         if(NULL == l1)
             return l2;
         else if(NULL == l2)
             return l1;
-        while(p1->next != NULL && p2->next != NULL)
+        while(p1 != NULL && p2 != NULL)
         {
             sum = (p1->val + p2->val + t);
             t = sum/10;
             sum = sum%10;
-            p1->val = sum;
-            p3 = p1;
+            p3->next = new ListNode(sum);
             p1 = p1->next;
             p2 = p2->next;
+            p3 = p3->next;
         }
-        if(p1->next == NULL)
+        while(p1 != NULL)
         {
-            p1->next = p2->next;
+            sum = (p1->val + t);
+            t = sum/10;
+            sum = sum%10;
+            p3->next = new ListNode(sum);
+            p1 = p1->next;
+            p3 = p3->next;
         }
-        sum = (p1->val + p2->val + t);
-        t = sum/10;
-        sum = sum%10;
-        p1->val = sum;
-        p3 = p1;
-        while(0 != t)
+        while(p2 != NULL)
         {
-            if(p1->next != NULL)
-            {
-                sum = p1->next->val + t;
-                t = sum/10;
-                sum = sum%10;
-                p1->next->val = sum;
-                p1 = p1->next;
-            }
-            else
-            {
-                ListNode *newNode = new ListNode(0);
-                newNode->val += t;
-                p1->next = newNode;
-                break;
-            }
+            sum = (p2->val + t);
+            t = sum/10;
+            sum = sum%10;
+            p3->next = new ListNode(sum);
+            p2 = p2->next;
+            p3 = p3->next;
         }
-        return result;
+        if(0 != t)
+        {
+            p3->next = new ListNode(t);
+            p3 = p3->next;
+        }
+
+        return dummy->next;
     }
     ListNode *addTwoNumbers02(ListNode *l1, ListNode *l2) {
         ListNode *p1 = l1, *p2 = l2;
@@ -86,24 +84,21 @@ public:
         sum = sum%10;
         p1->val = sum;
         p3 = p1;
-        while(0 != t)
+        while(p1->next != NULL)
         {
-            if(p1->next != NULL)
-            {
-                sum = p1->next->val + t;
-                t = sum/10;
-                sum = sum%10;
-                p1->next->val = sum;
-                p1 = p1->next;
-            }
-            else
-            {
-                ListNode *newNode = new ListNode(0);
-                newNode->val += t;
-                p1->next = newNode;
-                break;
-            }
+            sum = p1->next->val + t;
+            t = sum/10;
+            sum = sum%10;
+            p1->next->val = sum;
+            p1 = p1->next;
         }
+        if(0 != t)
+        {
+            ListNode *newNode = new ListNode(0);
+            newNode->val += t;
+            p1->next = newNode;
+        }
+
         return result;
     }
     ListNode *addTwoNumbers01(ListNode *l1, ListNode *l2) {
