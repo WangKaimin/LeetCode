@@ -2,7 +2,6 @@
 #define BINARYTREEZIGZAGLEVELORDERTRAVERSAL_HPP_INCLUDED
 
 #include <vector>
-#include <queue>
 #include <stack>
 #include "Tree.hpp"
 using namespace std;
@@ -18,16 +17,6 @@ using namespace std;
 class Solution {
 private:
     vector<vector<int> > arrs;
-    int count1(int c)
-    {
-        int i = 0;
-        while(0 != c)
-        {
-            c &= c-1;
-            i++;
-        }
-        return i;
-    }
 public:
     vector<vector<int> > zigzagLevelOrder(TreeNode *root) {
         //queue<TreeNode *> current;
