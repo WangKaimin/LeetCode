@@ -50,7 +50,7 @@ public:
         }
         return arrs;
     }
-    /* wrong answer, 这只是适合满树 */
+    /* wrong answer, full tree */
     vector<vector<int> > levelOrder_error(TreeNode *root) {
         queue<TreeNode *> q;
         vector<int> arr;
