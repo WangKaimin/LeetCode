@@ -34,14 +34,22 @@
 		</Compiler>
 		<Unit filename="AddTwoNumbers.hpp" />
 		<Unit filename="BinaryTreeInorderTraversal.hpp" />
+		<Unit filename="BinaryTreeLevelOrderTraversal.hpp" />
+		<Unit filename="BinaryTreeLevelOrderTraversalII.hpp" />
 		<Unit filename="BinaryTreePostorderTraversal.hpp" />
 		<Unit filename="BinaryTreePreorderTraversal.hpp" />
+		<Unit filename="BinaryTreeZigzagLevelOrderTraversal.hpp" />
 		<Unit filename="FlattenBinaryTreeToLinkedList.hpp" />
+		<Unit filename="List.cpp" />
+		<Unit filename="List.hpp" />
+		<Unit filename="MaximumDepthOfBinaryTree.hpp" />
 		<Unit filename="MedianOfTwoSortedArrays.hpp" />
 		<Unit filename="PathSum.hpp" />
 		<Unit filename="PathSumII.hpp" />
 		<Unit filename="PowxN.hpp" />
+		<Unit filename="ReorderList.hpp" />
 		<Unit filename="ReverseWordsInAString.hpp" />
+		<Unit filename="SameTree.hpp" />
 		<Unit filename="SingleNumber.hpp" />
 		<Unit filename="SingleNumberII.hpp" />
 		<Unit filename="Tree.cpp" />
