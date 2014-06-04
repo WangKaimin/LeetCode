@@ -40,14 +40,17 @@
 		<Unit filename="BinaryTreePreorderTraversal.hpp" />
 		<Unit filename="BinaryTreeZigzagLevelOrderTraversal.hpp" />
 		<Unit filename="FlattenBinaryTreeToLinkedList.hpp" />
+		<Unit filename="InsertInterval.hpp" />
 		<Unit filename="List.cpp" />
 		<Unit filename="List.hpp" />
 		<Unit filename="MaximumDepthOfBinaryTree.hpp" />
 		<Unit filename="MedianOfTwoSortedArrays.hpp" />
+		<Unit filename="PalindromeNumber.hpp" />
 		<Unit filename="PathSum.hpp" />
 		<Unit filename="PathSumII.hpp" />
 		<Unit filename="PowxN.hpp" />
 		<Unit filename="ReorderList.hpp" />
+		<Unit filename="ReverseInteger.hpp" />
 		<Unit filename="ReverseWordsInAString.hpp" />
 		<Unit filename="SameTree.hpp" />
 		<Unit filename="SingleNumber.hpp" />
