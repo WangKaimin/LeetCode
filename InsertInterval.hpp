@@ -14,33 +14,36 @@ struct Interval {
 class Solution {
 public:
     vector<Interval> insert04(vector<Interval> &intervals, Interval newInterval) {
-        vector<Interval> result(intervals);
-        vector<Interval>::iterator it = result.begin();
-        while(it != result.end())
+        vector<Interval> result;
+        vector<Interval>::iterator it = intervals.begin();
+        while(it != intervals.end())
         {
             if(newInterval.end < (*it).start) {
-                result.insert(it, newInterval);
-                return result;
+                result.push_back(newInterval);
+                break;
             }
             else if(newInterval.start > (*it).end) {
+                result.push_back(*it);
                 it++;
             }
             else if(newInterval.start <= (*it).start && newInterval.end >= (*it).end) {
-                it = result.erase(it);
+                it++;
             }
             else {
                 newInterval.start = min(newInterval.start, (*it).start);
                 newInterval.end = max(newInterval.end, (*it).end);
-                it = result.erase(it);
+                it++;
             }
         }
-        result.insert(result.end(), newInterval);
+        result.insert(result.end(), it, intervals.end());
+        if(it == intervals.end())
+            result.push_back(newInterval);
         return result;
     }
 
 public:
     vector<Interval> insert03(vector<Interval> &intervals, Interval newInterval) {
-        int i=0;
+        vector<Interval>::size_type i = 0;
         while(i<intervals.size())
         {
             if(newInterval.end < intervals[i].start) {
@@ -110,23 +113,24 @@ public:
     {
         Solution sol;
         vector<Interval> vals;
+        vector<Interval> result;
         Interval val;
-        for(int i=1; i<=10000; i+=2)
+        for(int i=1; i<=32; i+=3)
         {
             val.start = i;
-            val.end = i+1;
+            val.end = i+2;
             vals.push_back(val);
         }
         for(vector<Interval>::iterator it = vals.begin(); it != vals.end(); it++)
         {
             cout<<it->start<<"\t"<<it->end<<endl;
         }
-        Interval t(5 ,7);
-        sol.insert04(vals, t);
+        Interval t(5 ,8);
+        result = sol.insert04(vals, t);
         cout<<"--------------------\n";
-        for(vector<Interval>::iterator it = vals.begin(); it != vals.end(); it++)
+        for(auto it : result)
         {
-            cout<<it->start<<"\t"<<it->end<<endl;
+            cout<<it.start<<"\t"<<it.end<<endl;
         }
     }
 };

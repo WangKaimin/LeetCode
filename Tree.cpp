@@ -1,7 +1,8 @@
 #include "Tree.hpp"
-
-using namespace std;
 #include <iostream>
+using std::cout;
+using std::endl;
+
 void visit(TreeNode *root)
 {
     cout<<root->val<<" ";

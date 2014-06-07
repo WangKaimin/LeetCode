@@ -1,6 +1,7 @@
 #include "List.hpp"
 #include <iostream>
-using namespace std;
+using std::cout;
+using std::endl;
 void printList(ListNode *l)
 {
     if(NULL == l)
